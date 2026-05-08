@@ -1,18 +1,43 @@
 @echo off
-echo =====================================
-echo SuperOtto 3.1.0 编译脚本
-echo =====================================
+echo === SuperOtto Build Script ===
 echo.
 
-REM 创建必要的目录
-if not exist "picturetest" mkdir picturetest
-if not exist "music" mkdir music
-if not exist "x64\Release" mkdir x64\Release
+REM Set Qt 5.15.2 paths
+set QT_DIR=D:\Qt\5.15.2\mingw81_64
+set MINGW_DIR=D:\Qt\Tools\mingw810_64
+set CMAKE_DIR=D:\Qt\Tools\CMake_64
 
-echo 已创建必要的目录结构。
+REM Add tools to PATH
+set PATH=%MINGW_DIR%\bin;%CMAKE_DIR%\bin;%QT_DIR%\bin;%PATH%
+
+REM Check for cmake
+where cmake >nul 2>&1
+if %errorlevel% neq 0 (
+    echo [ERROR] CMake not found. Searched in: %CMAKE_DIR%\bin
+    pause
+    exit /b 1
+)
+
+echo Configuring project...
+cmake -B build -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH="%QT_DIR%" -DCMAKE_BUILD_TYPE=Release
+if %errorlevel% neq 0 (
+    echo [ERROR] CMake configuration failed.
+    pause
+    exit /b 1
+)
+
+echo Building project...
+cmake --build build --config Release -j%NUMBER_OF_PROCESSORS%
+if %errorlevel% neq 0 (
+    echo [ERROR] Build failed.
+    pause
+    exit /b 1
+)
+
 echo.
-echo 请使用 Visual Studio 2022 打开 SuperOtto.sln 进行编译。
+echo === Build successful! ===
+echo Executable: build\SuperOtto.exe
 echo.
-echo 提示: 程序会自动创建所需的文件夹，无需手动配置。
-echo.
+echo To run, copy resources\music\ and resources\pictures\ next to the exe.
+echo Or run: run.bat
 pause

@@ -1,43 +1,49 @@
+# Build directories
+build/
+build-*/
+cmake-build-*/
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+
 # Visual Studio
 .vs/
 *.suo
 *.user
-*.userosscache
-*.sln.docstates
-*.aps
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
 
-# Build results
-[Dd]ebug/
-[Rr]elease/
-x64/
-x86/
-[Bb]uild/
-bld/
-[Bb]in/
-[Oo]bj/
+# Compiled files
+*.obj
+*.o
+*.exe
+*.dll
+*.lib
+*.so
+*.dylib
 
-# Build logs
-*.log
-
-# NuGet
-packages/
-*.nupkg
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+.ninja_log
+.ninja_deps
+*.ninja
 
 # OS files
-Thumbs.db
-ehthumbs.db
-Desktop.ini
 .DS_Store
+Thumbs.db
+desktop.ini
 
-# User-specific files
-*.rsuser
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
-# IDE
+# IDE files
+.idea/
 .vscode/
-
-# Archives
-*.zip
+*.swp
+*.swo
+*~
