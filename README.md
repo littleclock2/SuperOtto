@@ -2,7 +2,7 @@
 
 基于 MFC 的双人对战网格路径规划游戏。玩家在网格地图上操控机器人，设置起点、终点与障碍物，通过 A* 算法自动寻路并沿路径动画移动，抢先到达奖杯得分。支持局域网 Socket 联机对战。
 
-> 当前最新版本：**v3.1.0** | [下载最新版本](https://github.com/littleclock2/SuperOtto3.1.0/releases/latest)
+> 当前最新版本：**v3.1.0** | [下载最新版本](https://github.com/littleclock2/SuperOtto/releases/latest)
 
 ## 项目架构
 
@@ -63,6 +63,12 @@ SuperOtto3.1.0/
 # Release x64
 powershell -ExecutionPolicy Bypass -File scripts/build.ps1 -Configuration Release -Platform x64
 ```
+
+## 演示视频
+
+功能演示视频已重命名为 `SuperOtto功能演示.mp4`，位于项目根目录。
+
+> 注意：视频文件约 183MB，超出 GitHub 单文件 100MB 限制，无法作为 Release 附件上传。如需分享请使用网盘或其他方式。
 
 ## 版本历史
 
