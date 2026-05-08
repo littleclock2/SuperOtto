@@ -106,7 +106,7 @@ powershell -ExecutionPolicy Bypass -File scripts/build.ps1 -Configuration Releas
 
 ---
 
-### v3.0.1 (2026-04-27)
+### v3.0.1 (2024-07)
 
 **构建自动化**
 
@@ -129,7 +129,7 @@ powershell -ExecutionPolicy Bypass -File scripts/build.ps1 -Configuration Releas
 
 ---
 
-### v2.8.0 (2026-04-20)
+### v2.8.0 (2024-06)
 
 **图片资源大幅扩展**
 
@@ -147,7 +147,7 @@ powershell -ExecutionPolicy Bypass -File scripts/build.ps1 -Configuration Releas
 
 ---
 
-### v2.3.0 (2026-04-15)
+### v2.3.0 (2024-06)
 
 **网络对战**
 
@@ -168,7 +168,7 @@ powershell -ExecutionPolicy Bypass -File scripts/build.ps1 -Configuration Releas
 
 ---
 
-### v1.3.0 (2026-04-10)
+### v1.3.0 (2024-06)
 
 **初始版本 - 基础框架**
 
