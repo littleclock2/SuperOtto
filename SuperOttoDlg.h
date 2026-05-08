@@ -10,7 +10,7 @@
 #include "afxdialogex.h"
 
 /****************************
-	kbk:非常重要的头文件
+	核心对话框头文件
 ***************/
 #include "MSocket.h"
 #define WM_SOCKET (WM_USER + 1)
@@ -45,7 +45,7 @@ inline CString GetMusicDirectory() {
 	return musicDir;
 }
 
-/* kbk :非常重要的预声明*/
+/* 预声明*/
 class MSocket;
 class CSuperOttoDlg : public CDialogEx
 {
@@ -189,14 +189,14 @@ public:
 
 	/*********************************************************************/
 	/**********************************************************************/
-	/*							以下函数以及变量kbk声明						*/
+	/*							以下函数以及变量声明						*/
 	void OnAccept();
 	void OnConnect();
 	void OnClose();
 	void OnReceive();
-	// 控制ip输入的空间----------kbk
+	// 控制ip输入的空间----------
 	CIPAddressCtrl m_nIPcontrol;
-	// 端口的值----------------------------kbk
+	// 端口的值----------------------------
 	MSocket* m_ServerSocket;
 	MSocket* m_ListenSocket;
 	MSocket* m_ClientSocket;//三种不同身份的Socket

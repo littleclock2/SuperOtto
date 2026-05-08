@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 /**********************************************************************************************************/
-/*                                      此文件由kbk导入                                                   */
+/*                                      网络通信模块                                                   */
 #include <afxsock.h>            // MFC 套接字扩展
 class CSuperOttoDlg;
 class MSocket : public CAsyncSocket
